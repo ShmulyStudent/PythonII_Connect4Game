@@ -1,4 +1,5 @@
 """Sets up the initializing strategy, and the rules and movements of a connect four game"""
+#Import ABC and abstractmethod from abc (Abstract Base Classes) in order to make an abstract class
 from abc import (ABC, abstractmethod)
 
 
