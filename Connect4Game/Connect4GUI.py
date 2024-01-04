@@ -6,7 +6,6 @@ from tkinter import messagebox
 #Import the rules from the Connect4Game.py file
 import Connect4Game as game
 
-
 class Connect4GUI:
     """Sets up the connect four GUI"""
     def __init__(self, master):
