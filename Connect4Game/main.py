@@ -32,14 +32,14 @@ for game_nr in range(1000):
         game_safety_copy = copy.deepcopy(game)
         #Try a move
         try:
-            #If it takes less than 1 second, do the move
+            #If it takes less than 1 second, do the move utilizing that player's strategy function
             move = func_timeout.func_timeout(
                 MAX_WAIT_TIME, competitor_list[game.current_player - 1].strategy, [game_safety_copy])
         #If it takes more than 1 second
         except func_timeout.FunctionTimedOut:
             #Display that it's taking too long
             print(f'time out limit exceeded: {competitor_list[game.current_player - 1].name} performs random move')
-            #Do another move
+            #Do a different move with the fallback random strategy
             move = random_choice.strategy(game_safety_copy)
         #Call the move
         game.make_move(move)
